@@ -1,0 +1,28 @@
+﻿@using Barbeda.Extensions;
+@using Barbeda.Models;
+@model Barbeda.ViewModel.BarbersServicesVM
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Create</h2>
+
+<form method="post">
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <label>Services</label>
+        @Html.DropDownList("ServiceId", Model.Services.ToSelectList<Service>("Id", "Name"), "Select Group", new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Babers</label>
+        @Html.DropDownList("BarberId", Model.Barbers.ToSelectList<Barber>("Id", "Name"), "Select Group", new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <input type="submit" class="btn btn-primary form-control" value="serviceToBarber" />
+    </div>
+    <a href="~/Admin/ServicetoBarbers/Index" class="btn btn-dark">Back to list</a>
+</form>
+
+
+

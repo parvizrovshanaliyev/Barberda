@@ -1,0 +1,51 @@
+﻿@model  IEnumerable<Barbeda.Models.BarberImage>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="card mb-3">
+    <div class="card-header">
+        <h2 class="m-b-10">Barber Portfolios</h2>
+        <h3><a href="/Admin/BarberImages/Create"> <b>+</b>Add Image To Barber Portfolios</a></h3>
+    </div>
+
+    <div class="card-body">
+        <div class="table-responsive">
+            <table style="width:100%" class="table table-bordered table-striped member-hover dataTable" id="dataTable" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Barber Name</th>
+                        <th>Barber Portfolios</th>
+                        <th colspan="3">Actions</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Barber Name</th>
+                        <th>Barber Portfolios</th>
+                        <th colspan="3">Actions</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @for (int i = 0; i < Model.Count(); i++)
+                    {
+                        <tr>
+                            <td>@Model.ElementAt(i).Barber.FullName</td>
+
+                            <td><img style="width:200px" src="~/Assets/img/@Model.ElementAt(i).Image" class="img-fluid"></td>
+                            <td>
+                                <a href="/Admin/BarberImages/Edit/@Model.ElementAt(i).Id" class="btn btn-warning"><i class="fas fa-edit"></i></a>
+                            </td>
+                            <td>
+                                <a href="/Admin/BarberImages/Delete/@Model.ElementAt(i).Id" class="btn btn-warning "><i class="fas fa-trash-alt"></i></a>
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

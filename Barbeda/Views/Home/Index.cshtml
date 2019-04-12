@@ -1,0 +1,1082 @@
+﻿@using Barbeda.Models;
+
+@model  Barbeda.ViewModel.HomeVM
+@{
+    ViewBag.Title = "Home Page";
+}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+
+<!-- Slider area starts -->
+<!-- #region slider -->
+<section id="slider">
+    <div id="carousel-example-generic" class="carousel slide">
+        <div class="carousel-inner" role="listbox">
+            <!-- Item 1 -->
+
+            @for (int i = 0; i < Model.Sliders.Count(); i++)
+            {
+
+
+                <div class="item  @(i==0? "active":" ") slide1" style="background-image:url('/Assets/img/@Model.Sliders.ElementAt(i).Image');">
+                    <div class="table">
+                        <div class="table-cell">
+                            <div class="intro-text">
+                                <div class="title clearfix">
+                                    @Html.Raw(Model.Sliders.ElementAt(i).TitleOne)
+                                    <h1>@Model.Sliders.ElementAt(i).TitleTwo</h1>
+                                </div>
+                                <a href="#" class="btn btn-trnsp btn-big">PURCHASE NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            }
+
+        </div>
+        <!-- End Wrapper for slides-->
+        <!-- Carousel Pagination -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+    </div>
+</section>
+
+<!-- #endregion -->
+<!-- Slider area ends -->
+<!-- About area starts -->
+<!-- #region about -->
+<section id="about" class="about-area section-big">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="section-title">
+                    <h2>About <span>Us</span></h2>
+                    <p>Locavore pork belly scenester, pinterest chillwave microdosing waistcoat pop-up. Flexitarian cliche artisan, biodiesel mixtape tacos art party. </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- About Text -->
+            <div class="col-md-6">
+                <div class="about-details mt-30">
+                    <h3 class="subtitle">Welcome to Our BARBERDA</h3>
+                    <p>Locavore pork belly scenester, pinterest chillwave microdosing waistcoat pop-up. Flexitarian +1 cliche artisan, biodiesel mixtape tacos art party mustache cardigan kitsch squid disrupt.</p>
+                    <ul>
+                        <li>Anim pariatur cliche reprehenderit</li>
+                        <li>Quis nostrud exercitation ullamco laboris nisi ut aliquip commodo</li>
+                    </ul>
+                    <div class="author-details">
+                        <div class="author-img">
+                            <img src="~/Assets/img/about/author-img.png" alt="">
+                        </div>
+                        <div class="author-sign">
+                            <h4>BARBER ANDERSON</h4>
+                            <img src="~/Assets/img/about/author-sign.png" alt="">
+                            <div class="author-link">
+                                <a href="#"><i class="fa fa-rss"></i></a>
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-skype"></i></a>
+                                <a href="#"> <i class="fa fa-google-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- About Image -->
+            <div class="col-md-6">
+                <div class="opening-hours-wrap mt-30">
+                    <h3>Working Hours</h3>
+                    <ul class="opening-hours">
+                        <li>Monday<span class="pull-right">9.00 - 21.00</span></li>
+                        <li>Tuesday <span class="pull-right">9.00 - 21.00</span></li>
+                        <li>Wednesday <span class="pull-right">9.00 - 21.00</span></li>
+                        <li>Thrusday <span class="pull-right">9.00 - 21.00</span></li>
+                        <li>Friday <span class="pull-right"> 9.00 - 18.30</span></li>
+                        <li>Saturday <span class="pull-right">9.30 - 18.30</span></li>
+                        <li>Sunday <span class="pull-right">Closed</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- #endregion -->
+<!-- About area ends -->
+<!-- Service area starts -->
+<!-- #region service -->
+<section id="service" class="service-area section-big">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title text-center">
+                    <h2>OUR <span>SERVICE </span></h2>
+                    <p>Locavore pork belly scenester, pinterest chillwave microdosing waistcoat pop-up. Flexitarian cliche artisan, biodiesel mixtape tacos art party.  </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="home-services">
+
+                <!-- Service box -->
+                @foreach (var item in Model.Services)
+                {
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="service-box">
+                            <i class="fas fa-cut"></i>
+                            <h3 class="subtitle">@item.Name</h3>
+                            <p>@item.Description</p>
+                        </div>
+                    </div>
+                }
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- #endregion -->
+<!-- Service area ends -->
+<!-- Booking area starts -->
+<!-- #region booking -->
+<div id="book" class="book-area section-big">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="section-title">
+                    <h2>Make an <span>appointment</span></h2>
+                    <p>Locavore pork belly scenester, pinterest chillwave microdosing waistcoat pop-up. Flexitarian cliche artisan, biodiesel mixtape tacos art party.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <div class="contact-form-book mt-30">
+
+                    <!-- Submition status -->
+                    <div id="form-appoint"></div>
+
+                    <form class="appointment-form" id="ajax-appoint" method="post" action="http://designcarebd.com/barberda/assets/appoint.php">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input class="form-control" id="b_name" name="b_name" placeholder="Name" type="text">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input class="form-control" id="b_email" name="b_email" placeholder="Email" type="email" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input class="form-control" id="b_phone" name="b_phone" placeholder="Phone" type="text">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input class="form-control date-pick" id="datepicker" name="appontment-date" placeholder="Date" type="text">
+                                    <i class="icon fa fa-calendar"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <select id="catagory" name="catagory" class="form-control select-picker-icon">
+                                        <option value="">Choose Services</option>
+                                        <option value="Haircut">Haircut</option>
+                                        <option value="shave">shave</option>
+                                        <option value="Hair wash">Hair wash</option>
+                                        <option value="Clean up">Clean up</option>
+                                        <option value="Face">Face</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <select id="bar" name="bar" class="form-control select-picker-icon">
+                                        <option value="">Barber</option>
+                                        <option value="Smith">Smith</option>
+                                        <option value="Ursula">Ursula</option>
+                                        <option value="Jhon Smith">Jhon Smith</option>
+                                        <option value="Bernard Dent">Bernard Dent</option>
+                                        <option value="Bernard Dent">Bernard Dent</option>
+                                        <option value="Bernard Dent">Bernard Dent</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <textarea name="b_message" id="b_message" class="form-control" rows="6" placeholder="Message" required></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-12 mt20">
+                                <button class="btn btn-default">Book Appointment</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- #endregion -->
+<!-- Booking area ends -->
+<!-- Team area starts -->
+<!-- #region team area -->
+<section id="team" class="team-area section-big">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="section-title">
+                    <h2>Our <span> BARBER</span></h2>
+                    <p>Locavore pork belly scenester, pinterest chillwave microdosing waistcoat pop-up. Flexitarian cliche artisan, biodiesel mixtape tacos art party.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row barber-items">
+            @foreach (var item in Model.Barbers)
+            {
+                <div style="padding:4%" class="col-lg-4 col-md-6 mix text-center bName  ">
+
+                    <div class="item">
+                        @*<a href="/BarberDetails/Index/@item.Id">
+
+                            </a>*@
+                        <img src="~/Assets/img/@item.Image" alt="">
+
+                        <div class="overlay">
+                            <div class="icon">
+                                <h3>@item.FullName</h3>
+                                <button id="myBtn" data-toggle="modal" data-target="@item.Id" value="@item.Id" class="btn btn-primary js-show-modal1">Quick View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/BarberDetails/Index/@item.Id"><h4>@item.FullName</h4></a>
+                </div>
+            }
+        </div>
+        <!-- Modal  -->
+        
+        <!-- The Modal -->
+        <!-- Modal1 -->
+        @foreach (var barber in Model.Barbers)
+        {
+            <div id="@barber.Id" class="wrap-modal1 js-modal1 p-t-60 p-b-20">
+                <div class="overlay-modal1 js-hide-modal1"></div>
+
+                <div class="container">
+
+                    <button class="how-pos3 hov3 trans-04 js-hide-modal1">
+                        <img src="~/Assets/icon-close2.png" alt="CLOSE">
+                    </button>
+                    <!-- content -->
+                    <!-- #region content -->
+                    <section id="about" style="margin: -2%;    padding: 42px 49px" class="about-area section-big">
+
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <div class="section-title">
+                                    <h2>About <span>Barber</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- barber Text -->
+                            <div class="col-md-6">
+                                <div class="about-details mt-30">
+                                    <h3 class="subtitle">@barber.FullName</h3>
+                                    <p>@barber.Description</p>
+                                    <h2>Services</h2>
+                                    <ul>
+
+                                        @foreach (var service in barber.ServicetoBarbers.Select(b => b.ServiceId))
+                                        {
+                                            <li>@service</li>
+                                        }
+
+                                    </ul>
+                                    <div class="author-details">
+                                        <div class="author-img">
+                                            <img style=" width:216px" class="img-thumbnail barberProfil" src="/Assets/img/barbers/8992acfc-ec7e-4cda-8632-00f2511c194abarber-gallery-7.jpg" alt="">
+                                        </div>
+                                        <div class="author-sign">
+                                            <h4>@barber.FullName</h4>
+
+                                            <div class="author-link">
+                                                <a href="#"><i class="fa fa-rss"></i></a>
+                                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                                <a href="#"><i class="fa fa-skype"></i></a>
+                                                <a href="#"> <i class="fa fa-google-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- barber Image -->
+                            <div class="col-md-6">
+                                <div>
+
+                                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                        <!-- Indicators -->
+                                        <ol class="carousel-indicators">
+                                            @for (int i = 0; i < barber.BarberImages.Where(b => b.BarberId == barber.Id).Select(img => img.Image).Count(); i++)
+                                            {
+                                                <li data-target="#myCarousel" data-slide-to="@barber.BarberImages.ElementAt(i).Id" class="@(i==0? "active":" ")"></li>
+                                            }
+
+                                        </ol>
+
+                                        <!-- Wrapper for slides -->
+                                        <div class="carousel-inner">
+                                            @for (int i = 0; i < barber.BarberImages.Where(b => b.BarberId == barber.Id).Select(img => img.Image).Count(); i++)
+                                            {
+                                                <div class="item @(i==0? "active":" ")">
+                                                    <img src="~/Assets/img/@barber.BarberImages.ElementAt(i).Image" alt="Chania">
+                                                    <div class="carousel-caption">
+                                                        <h3>Los Angeles</h3>
+                                                        <p>LA is always so much fun!</p>
+                                                    </div>
+                                                </div>
+                                            }
+
+
+                                            <!-- Left and right controls -->
+                                            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                                                <span class="glyphicon glyphicon-chevron-left"></span>
+                                                <span class="sr-only">Previous</span>
+                                            </a>
+                                            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                                <span class="glyphicon glyphicon-chevron-right"></span>
+                                                <span class="sr-only">Next</span>
+                                            </a>
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <!-- #endregion -->
+
+                </div>
+            </div>
+        }
+        @*@Html.Partial("_BarberDetails")*@
+    </div>
+
+</section>
+
+<!-- #endregion -->
+<!-- Team area ends -->
+<!-- Work area starts -->
+<!-- #region work area portfolio -->
+<section id="work" class="works section-big">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="section-title">
+                    <h2>OUR	<span>Portfolio</span></h2>
+                    <p>Locavore pork belly scenester, pinterest chillwave microdosing waistcoat pop-up. Flexitarian cliche artisan, biodiesel mixtape tacos art party.  </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Works filter -->
+            <ul class="work filters">
+
+                <li class="filter " data-filter="all">ALL</li>
+
+                @for (int i = 0; i < Model.Services.Count(); i++)
+                {
+                    <li class="filter  @(i==0? "active":" ")" data-filter=".@Model.Services.ElementAt(i).DataFilter">@Model.Services.ElementAt(i).Name</li>
+                }
+
+            </ul>
+            <!-- / Works filter -->
+            <div class="portfolio">
+                <div class="work-items">
+                    <!-- work item -->
+                    @for (int i = 0; i < Model.Services.Count(); i++)
+                    {
+                        foreach (var item in Model.Services.ElementAt(i).ServicePortfolios)
+                        {
+                            <div class="col-md-3 col-sm-6 mix @Model.Services.ElementAt(i).DataFilter">
+
+                                <div class="item">
+                                    <a href="~/Assets/img/@item.Image" class="work-popup">
+                                        <img src="~/Assets/img/@item.Image" alt="">
+
+                                        <div class="overlay">
+                                            <div class="icon">
+                                                <i class="fa fa-arrows-alt"></i>
+                                                <h3>@item.Service.Name</h3>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        }
+
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- #endregion -->
+<!-- Work area ends -->
+<!-- Testimonial area starts -->
+<!-- #region testimonial -->
+<section id="testimonial" class="testimonial-area section-big text-center">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12 ">
+                <div class="section-title">
+                    <h2>Customer say<span>about us</span></h2>
+                    <p>Locavore pork belly scenester, pinterest chillwave microdosing waistcoat pop-up. Flexitarian cliche artisan, biodiesel mixtape tacos art party.  </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="testimonial-list">
+
+                    <!-- Testimonial item -->
+                    <div class="single-testimonial mt-30">
+                        <div class="img-details">
+                            <img src="~/Assets/img/testimonial/1.jpg" alt="">
+                            <div class="desg">
+                                <h3>Micle Jack</h3>
+                                <p>CEO, Data link</p>
+                            </div>
+                        </div>
+                        <p>
+                            "Locavore pork belly scenester, pinterest chillwave microdosing waistcoat pop-up. Flexitarian
+                            cliche artisan, biodiesel mixtape tacos art party mustache cardigan kitsch squid disrupt. Truffaut deep v kitsch salvia sriracha."
+                        </p>
+                    </div>
+
+                    <!-- Testimonial item -->
+                    <div class="single-testimonial mt-30">
+                        <div class="img-details">
+                            <img src="~/Assets/img/testimonial/2.jpg" alt="">
+                            <div class="desg">
+                                <h3>Andrew lehref</h3>
+                                <p>Marketing Manager</p>
+                            </div>
+                        </div>
+                        <p>
+                            "Locavore pork belly scenester, pinterest chillwave microdosing waistcoat pop-up. Flexitarian
+                            cliche artisan, biodiesel mixtape tacos art party mustache cardigan kitsch squid disrupt. Truffaut deep v kitsch salvia sriracha."
+                        </p>
+                    </div>
+
+                    <!-- Testimonial item -->
+                    <div class="single-testimonial mt-30">
+                        <div class="img-details">
+                            <img src="~/Assets/img/testimonial/3.jpg" alt="">
+                            <div class="desg">
+                                <h3>Jection Null</h3>
+                                <p>Executive Manager</p>
+                            </div>
+                        </div>
+                        <p>
+                            "Locavore pork belly scenester, pinterest chillwave microdosing waistcoat pop-up. Flexitarian
+                            cliche artisan, biodiesel mixtape tacos art party mustache cardigan kitsch squid disrupt. Truffaut deep v kitsch salvia sriracha."
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- #endregion -->
+<!-- Testimonial area ends -->
+<!-- fun-facts area starts -->
+<!-- #region fun facts  -->
+<section id="fun-facts" class="fun-facts-area section-big">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-3">
+                <div class="fun-fact text-center tab-margin-bottom">
+                    <h3><span class="cp-counter">50</span></h3>
+                    <p>Years experience</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="fun-fact text-center tab-margin-bottom">
+                    <h3> <span class="cp-counter">950</span></h3>
+                    <p>Happy Customer</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="fun-fact text-center">
+                    <h3> <span class="cp-counter">80</span></h3>
+                    <p>Number of Barber</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="fun-fact text-center">
+                    <h3> <span class="cp-counter">50</span></h3>
+                    <p>Awsome Awards</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- #endregion -->
+<!-- fun-facts area ends -->
+<!-- Price area starts -->
+<!-- #region price -->
+<section id="pricing" class="pricing-area section-big">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title text-center">
+                    <h2>Pricing <span>Plans</span></h2>
+                    <p>Locavore pork belly scenester, pinterest chillwave microdosing waistcoat pop-up. Flexitarian cliche artisan, biodiesel mixtape tacos art party.  </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Pricing Table -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="price-item" data-connectors="1">
+                    <div class="info">
+                        <p class="level">MAN</p>
+                    </div>
+                    <div class="features">
+                        <ul>
+                            <li>Haircut </li>
+                            <li>Face shave </li>
+                            <li>Haircut & shave </li>
+                            <li>Beard trim </li>
+                            <li>Head shave</li>
+                            <li>Hair wash </li>
+                            <li>Clean up</li>
+                        </ul>
+                    </div>
+                    <a class="btn" href="#">APPOINTMENT</a>
+                </div>
+            </div>
+            <!-- Pricing Table -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="price-item featured" data-connectors="1">
+                    <div class="info">
+                        <p class="level">WOMAN</p>
+                    </div>
+                    <div class="features">
+                        <ul>
+                            <li>Styling </li>
+                            <li>Styling & Color </li>
+                            <li>Styling & tint </li>
+                            <li>Styling & Haircut </li>
+                            <li>Hair color </li>
+                            <li>Hair wash </li>
+                            <li>High quality wash </li>
+                        </ul>
+                    </div>
+                    <a class="btn" href="#">APPOINTMENT</a>
+                </div>
+            </div>
+            <!-- Pricing Table -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="price-item" data-connectors="1">
+                    <div class="info">
+                        <p class="level">CHILD</p>
+                    </div>
+                    <div class="features">
+                        <ul>
+                            <li>Haircut </li>
+                            <li>Hair style </li>
+                            <li>Hair color </li>
+                            <li>Hair wash </li>
+                            <li>Hair Treatment </li>
+                            <li>body Treatment </li>
+                            <li>color Treatment </li>
+                        </ul>
+                    </div>
+                    <a class="btn" href="#">APPOINTMENT</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- #endregion -->
+<!-- Price area ends -->
+<!-- Video area starts -->
+<!-- #region video -->
+<div id="video" class="video-area">
+    <div class="container text-center">
+        <div class="video-content">
+            <a class="popup-youtube" href="http://www.youtube.com/watch?v=xtZE3sMv6lg">
+                <i class="fa fa-play"></i>
+            </a>
+            <h2>Watch This Video</h2>
+        </div>
+    </div>
+</div>
+
+<!-- #endregion -->
+<!-- Video area ends -->
+<!-- News area starts -->
+<!-- #region news -->
+<section id="news" class="news-area section-big">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title text-center">
+                    <h2>Latest <span>Blog</span></h2>
+                    <p>Locavore pork belly scenester, pinterest chillwave microdosing waistcoat pop-up. Flexitarian cliche artisan, biodiesel mixtape tacos art party. </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- News item 1 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="single-news">
+                    <div class="news-image">
+                        <a href="#news-modal-1" data-toggle="modal">
+                            <img src="~/Assets/img/news/1.jpg" alt="">
+                        </a>
+                        <div class="news-date">
+                            <h3 class="month"> feb</h3>
+                            <h3 class="date"> 12</h3>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <p class="news-meta text-muted">
+                            <span><i class="fa fa-user"></i>Posted by admin</span>
+                            <span><i class="fa fa-comments"></i>Comments</span>
+                        </p>
+
+                        <a href="#news-modal-1" data-toggle="modal">
+                            <h3 class="subtitle">How to Make Your Hair Grow Fastering</h3>
+                        </a>
+
+                        <p>Locavore pork belly scenester, pinterest chillw ave microdosing waistcoat pop-up. Flexitarian  cliche artisan, biodiesel mixtape tacos art party mustache cardigan kitsch squid disrupt.</p>
+                        <a class="btn" href="#news-modal-1" data-toggle="modal">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- News item 1 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="single-news">
+                    <div class="news-image">
+                        <a href="#news-modal-2" data-toggle="modal">
+                            <img src="~/Assets/img/news/2.jpg" alt="">
+                        </a>
+                        <div class="news-date">
+                            <h3 class="month"> feb</h3>
+                            <h3 class="date"> 13</h3>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <p class="news-meta text-muted">
+                            <span><i class="fa fa-user"></i>Posted by admin</span>
+                            <span><i class="fa fa-comments"></i>Comments</span>
+                        </p>
+
+                        <a href="#news-modal-2" data-toggle="modal">
+                            <h3 class="subtitle">The perfect Shave to look like awesome </h3>
+                        </a>
+
+                        <p>Locavore pork belly scenester, pinterest chillw ave microdosing waistcoat pop-up. Flexitarian  cliche artisan, biodiesel mixtape tacos art party mustache cardigan kitsch squid disrupt.</p>
+                        <a class="btn" href="#news-modal-2" data-toggle="modal">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- News item 1 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="single-news">
+                    <div class="news-image">
+                        <a href="#news-modal-3" data-toggle="modal">
+                            <img src="~/Assets/img/news/3.jpg" alt="">
+                        </a>
+                        <div class="news-date">
+                            <h3 class="month"> feb</h3>
+                            <h3 class="date"> 14</h3>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <p class="news-meta text-muted">
+                            <span><i class="fa fa-user"></i>Posted by admin</span>
+                            <span><i class="fa fa-comments"></i>Comments</span>
+                        </p>
+
+                        <a href="#news-modal-3" data-toggle="modal">
+                            <h3 class="subtitle">Refreshing trim of your Beard grow grip</h3>
+                        </a>
+
+                        <p>Locavore pork belly scenester, pinterest chillw ave microdosing waistcoat pop-up. Flexitarian  cliche artisan, biodiesel mixtape tacos art party mustache cardigan kitsch squid disrupt.</p>
+                        <a class="btn" href="#news-modal-3" data-toggle="modal">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- News 1 Modals -->
+        <div class="news-modal modal fade" id="news-modal-1" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <img src="~/Assets/img/news/1.jpg" alt="">
+                                <h2>How to Make Your Hair Grow Fastering</h2>
+                                <p class="news-meta text-muted">
+                                    <span><i class="fa fa-user"></i>Posted by admin</span>
+                                    <span><i class="fa fa-calendar"></i> January 10, 2017</span>
+                                </p>
+                                <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. </p>
+                                <p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure? On the other hand.</p>
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- News 2 Modals -->
+        <div class="news-modal modal fade" id="news-modal-2" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <img src="~/Assets/img/news/2.jpg" alt="">
+                                <h2>The perfect Shave to look like awesome</h2>
+                                <p class="news-meta text-muted">
+                                    <span><i class="fa fa-user"></i> Posted by admin</span>
+                                    <span><i class="fa fa-calendar"></i> 02 Nov 2017 </span>
+                                </p>
+                                <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. </p>
+                                <p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure? On the other hand.</p>
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- News 3 Modals -->
+        <div class="news-modal modal fade" id="news-modal-3" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <img src="~/Assets/img/news/3.jpg" alt="">
+                                <h2>Refreshing trim of your Beard grow grip</h2>
+                                <p class="news-meta text-muted">
+                                    <span><i class="fa fa-user"></i> Posted by admin</span>
+                                    <span><i class="fa fa-calendar"></i> 02 Nov 2017 </span>
+                                </p>
+                                <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. </p>
+                                <p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure? On the other hand.</p>
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- #endregion -->
+<!-- News area ends -->
+<!-- Subscribe area starts -->
+<!-- #region Subscribe -->
+<div id="subscribe" class="subscribe-area section-big">
+    <div class="container">
+        <div class="subscribe-box">
+
+            <div class="row">
+
+                <div class="col-md-6">
+                    <h2>SIGN UP FOR <span>NEWSLETTER</span></h2>
+                    <p>We'll send email notifications everytime we release new Theme.</p>
+                </div>
+
+                <div class="col-md-5 col-md-offset-1">
+                    <form id="mc-form" class="mc-form">
+                        <div class="newsletter-form">
+
+                            <input type="email" autocomplete="off" id="mc-email" placeholder="Email address" class="form-control">
+
+                            <button class="mc-submit" type="submit"><i class="fa fa-paper-plane"></i></button>
+
+                            <div class="clearfix"></div>
+
+                            <!-- mailchimp-alerts Start -->
+                            <div class="mailchimp-alerts">
+                                <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
+                                <div class="mailchimp-success"></div><!-- mailchimp-success end -->
+                                <div class="mailchimp-error"></div><!-- mailchimp-error end -->
+                            </div>
+                            <!-- mailchimp-alerts end -->
+
+
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- #endregion -->
+<!-- Subscribe area ends -->
+<!-- #region Contact -->
+<section id="contact" class="contact-area section-big">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="section-title text-center">
+                    <h2>GET IN <span>TOUCH</span></h2>
+                    <p>Locavore pork belly scenester, pinterest chillwave microdosing waistcoat pop-up. Flexitarian cliche artisan, biodiesel mixtape tacos art party. </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <!-- Contact form starts -->
+                <div class="contact-form ">
+
+                    <!-- Submition status -->
+                    <div id="form-messages"></div>
+
+                    <form id="ajax-contact" action="http://designcarebd.com/barberda/assets/mailer.php" method="post">
+                        <div class="row">
+
+                            <div class="col-sm-6">
+                                <div class="form-group in_name ficon mt-30">
+                                    <span><i class="fa fa-user-o"></i></span>
+
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="Full Name" required="required">
+                                </div>
+                                <div class="form-group in_email ficon">
+                                    <span><i class="fa fa-envelope-o"></i></span>
+                                    <input type="email" name="email" class="form-control" id="email" placeholder="Email Address" required="required">
+                                </div>
+                                <div class="form-group in_subject ficon">
+                                    <span><i class="fa fa-phone"></i></span>
+                                    <input type="text" name="phone" class="form-control" id="phone" placeholder="Your Phone Number" required="required">
+                                </div>
+
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-group mt-30 in_message box-icon">
+                                    <span><i class="fa fa-envelope"></i></span>
+                                    <textarea name="message" class="form-control" id="message" placeholder="Your Message" required="required"></textarea>
+                                </div>
+
+                                <div class="actions">
+                                    <input type="submit" value="Send Message" name="submit" id="submitButton" class="btn" title="Submit Your Message!">
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+                <!-- Contact form ends-->
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- #endregion -->
+<!-- Google Map starts-->
+<div id="contactgoogleMap"></div>
+<!-- Google Map ends -->
+
+@section scripts{
+
+    <script>
+       
+
+        var idModal;
+
+        $(document).on("click", ".js-show-modal1", function (e) {
+            e.preventDefault();
+             idModal = $(this).data("target");
+            var modal = document.getElementById(idModal);
+            $(modal).addClass('show-modal1');
+
+            //modal.classList.add("show-modal1");
+            console.log(modal.className);
+            console.log(modal);
+
+        });
+
+        $(document).on("click", ".js-hide-modal1", function () {
+           
+            
+            //var idm = $('.js-show-modal1').data("target");
+
+            var modalh = document.getElementById(idModal);
+            modalh.classList.remove('show-modal1');
+           
+            console.log(modalh);
+            console.log(idModal);
+
+        });
+
+            //$('.js-show-modal1').on('click', function (e) {
+            //    e.preventDefault();
+            //    var idModal = $(this).data("target");
+
+            //    var modal = document.getElementById(idModal);
+            //    modal.classList.add("show-modal1");
+            //    //modal.addClass('show-modal1');
+            //    console.log(modal.className);
+
+            //});
+
+
+            //$('.js-hide-modal1').on('click', function () {
+
+            //    var id = $('.js-show-modal1').data("target");
+
+            //    var modal = document.getElementById(id);
+            //    modal.classList.remove('show-modal1');
+            //    console.log(modal.className);
+            //});
+        
+
+
+                                                                                                                    //var spanClose;
+
+                                                                                                                    //$(document).on("click", "#myBtn", function () {
+                                                                                                                    //    //debugger
+                                                                                                                    //    var idModal = $(this).data("target")
+
+                                                                                                                    //    var modal = document.getElementById(idModal);
+                                                                                                                    //    spanClose = document.getElementById(idModal);
+
+                                                                                                                    //    $(spanClose).click(function () {
+                                                                                                                    //        modal.style.display = "none";
+                                                                                                                    //    })
+
+                                                                                                                    //    modal.style.display = "block";
+                                                                                                                    //    window.onclick = function (event) {
+                                                                                                                    //        if (event.target == modal) {
+                                                                                                                    //            modal.style.display = "none";
+                                                                                                                    //        }
+                                                                                                                    //    }
+                                                                                                                    //    $()
+                                                                                                                    //})
+
+                                                                                                                    // When the user clicks the button, open the modal
+
+                                                                                                                    // When the user clicks on <span> (x), close the modal
+
+
+                                                                                                                    // When the user clicks anywhere outside of the modal, close it
+
+    </script>
+    <script src="~/Areas/Admin/Assets/vendor/jquery-3.2.1.min.js"></script>
+
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+
+
+}
+@*<script>
+
+
+
+                //var barber = $("#BarberDet");
+                //$(document).on("click", barber, function () {
+                //    var barberId = $(this).val();
+
+                //        $.ajax({
+
+                //            url: "/Ajax/BarberDetail",
+                //            type: "GET",
+                //            data: { id: barberId },
+                //            success: function (res) {
+                //                console.log(res);
+                //            }
+
+                //        });
+                //});
+                    //var groupsJ = $("#groupsJ");
+                    //var studentsJ = $("#studentsJ");
+
+                    //groupsJ.change(function () {
+                    //    var _groupId = $(this).val();
+
+                    //    $.ajax({
+                    //        url: "/Ajax/GetStudents_JQUERY",
+                    //        type: "GET",
+                    //        data: { id: _groupId },
+                    //        success: function (res) {
+                    //            studentsJ.html(res);
+                    //        }
+                    //    });
+
+                    //});
+
+
+    </script>*@

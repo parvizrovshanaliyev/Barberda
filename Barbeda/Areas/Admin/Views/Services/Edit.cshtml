@@ -1,0 +1,40 @@
+﻿@model  Barbeda.Models.Service
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Edit Service </h2>
+
+<form enctype="multipart/form-data" method="post">
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        @Html.LabelFor(s => s.Name)
+        @Html.TextBoxFor(s => s.Name, new { @class = "form-control " })
+        @Html.ValidationMessageFor(t => t.Name, null, new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(s => s.Description)
+        @Html.TextBoxFor(s => s.Description, new { @class = "form-control " })
+        @Html.ValidationMessageFor(t => t.Description, null, new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(s => s.Price)
+        @Html.TextBoxFor(s => s.Price, new { @class = "form-control " })
+        @Html.ValidationMessageFor(t => t.Price, null, new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(s => s.DataFilter)
+        @Html.TextBoxFor(s => s.DataFilter, new { @class = "form-control " })
+        @Html.ValidationMessageFor(t => t.DataFilter, null, new { @class = "text-danger" })
+    </div>
+    <div style="display:flex;" class="form-group ">
+        @Html.LabelFor(t => t.Photo)
+        @Html.TextBoxFor(t => t.Photo, new { @class = "form-control  col-md-6", type = "file", accept = "image/*" })
+        @Html.ValidationMessageFor(t => t.Photo)
+        <label style=" margin-left: 23%;">Current Image</label>
+        <img src="~/Assets/img/@Model.Image" style="height:100px;object-fit:contain" alt="Alternate Text" />
+    </div>
+    <input type="submit" class="btn btn-primary" name="name" value="Update" />
+    <a href="~/Admin/Services/Index" class="btn btn-dark">Back to list</a>
+</form>

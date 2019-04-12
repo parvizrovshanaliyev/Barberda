@@ -1,0 +1,26 @@
+﻿@using Barbeda.Models;
+@model IEnumerable<Barber>
+
+<div class="row barber-items">
+    @foreach (var item in Model)
+    {
+        <div style="padding:4%" class="col-lg-4 col-md-6 mix text-center bName  ">
+
+            <div class="item">
+                @*<a href="/BarberDetails/Index/@item.Id">
+
+                    </a>*@
+                <img src="~/Assets/img/@item.Image" alt="">
+
+                <div class="overlay">
+                    <div class="icon">
+                        <h3>@item.FullName</h3>
+                        <button id="myBtn" data-toggle="modal" data-target="@item.Id" value="@item.Id" class="btn btn-primary js-show-modal1">Quick View Details</button>
+                    </div>
+                </div>
+            </div>
+            <a href="/BarberDetails/Index/@item.Id"><h4>@item.FullName</h4></a>
+        </div>
+    }
+</div>
+

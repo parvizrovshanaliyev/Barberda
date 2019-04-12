@@ -1,0 +1,23 @@
+﻿@using Barbeda.Extensions;
+@using Barbeda.Models;
+@model Barbeda.ViewModel.ServiceImagesVM
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<form method="post" enctype="multipart/form-data">
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <label>Services</label>
+        @Html.DropDownList("ServiceId", Model.Services.ToSelectList<Service>("Id", "Name"), "Select Group", new { @class = "form-control" })
+    </div>
+    <div  class="form-group ">
+        <label for="photo" >Choose Photo</label>
+        <input type="file" id="photo" name="Photo" class="form-control" />
+    </div>
+    <div class="form-group">
+        <input type="submit" class="btn btn-primary form-control" value="Add Image To Service" />
+    </div>
+    <a href="~/Admin/ServicePOrtfolios/Index" class="btn btn-dark">Back to list</a>
+</form>

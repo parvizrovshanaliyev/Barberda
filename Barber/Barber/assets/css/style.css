@@ -1,0 +1,1648 @@
+/* ----------------------------------------------------------------------------------------
+* Author        : Barberda
+* Template Name : Barberda | One Page Multipurpose Html Template
+* File          : Barberda main CSS file
+* Version       : 1.0
+* ---------------------------------------------------------------------------------------- */
+
+
+/* INDEX
+----------------------------------------------------------------------------------------
+
+01. General css
+
+02. Navigation area css
+
+03. Slider area css
+
+04. About area css
+
+05. Service area css
+
+06. Portfolio/work area css
+
+07. Team Area Css
+
+08. Fun facts area css
+
+09. Pricing area css
+
+10. Testimonial area css
+
+11. News area css
+
+12. Video area css
+
+13. Subsicribe area css
+
+14. Contact area css
+
+15. Google map area css
+
+16. footer area css
+
+-------------------------------------------------------------------------------------- */
+
+
+/* Google Fonts lato and open sans */
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,900|Open+Sans:400,600,700');
+
+
+/* ----------------------------------------------------------------------------------------
+*                                       01. General css
+* -------------------------------------------------------------------------------------- */
+
+html, body {
+	height: 100%
+}
+
+body {
+	color: #333;
+	width: 100%;
+	height: 100%;
+	font-size: 15px;
+	line-height: 1.6;
+	font-family: 'Open Sans', sans-serif;
+    font-weight: 400
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #333;
+	font-weight: 700;
+	font-family: 'Lato', sans-serif;
+}
+
+.subtitle {
+	font-size: 20px;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+a {
+	text-decoration: none;
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+}
+
+a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+a:focus {
+	outline: none;
+	text-decoration: none;
+}
+
+ul, li {
+	margin: 0;
+	padding: 0;
+}
+
+fieldset {
+	border: 0 none;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.btn.active.focus, 
+.btn.active:focus, 
+.btn.focus, 
+.btn.focus:active,
+.btn:active:focus, 
+.btn:focus {
+	outline: none;
+}
+
+.btn, input[type='submit'] {
+	display: inline-block;
+	background: transparent;
+	padding: 10px 25px;
+	border-radius: 0px;
+	transition: 0.3s;
+	-moz-transition: 0.3s;
+	-webkit-transition: 0.3s;
+	color: #fff;
+	background: #333;
+	border: none;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+}
+
+.btn.btn-trnsp {
+	background: #b38859;
+	border-radius: 1px;
+	color: #fff;
+}
+
+.btn-big {
+	border-radius: 1px;
+	font-size: 20px;
+	font-weight: 900;
+}
+
+.btn.btn-trnsp:hover {
+	color: #333;
+}
+
+.section-big {
+	padding: 95px 0px;
+}
+
+.section-small {
+	padding: 50px 0px;
+}
+
+.section-title {
+	margin: auto;
+	max-width: 570px;
+    margin-bottom: 30px
+}
+
+.section-title.white h2 {
+	color: #fff;
+}
+
+.section-title h2 {
+	font-size: 36px;
+	font-weight: 900;
+	margin-bottom: 30px;
+	position: relative;
+	padding-bottom: 30px;
+	line-height: 30px;
+	margin-top: 0;
+	text-transform: uppercase;
+	letter-spacing: 2px
+}
+
+.section-title h2:before {
+	content: '';
+	position: absolute;
+	width: 70px;
+	margin-left: -35px;
+	height: 2px;
+	left: 50%;
+	bottom: 0px;
+	background-color: #b38859;
+}
+
+.section-title h2 span {
+	color: #b38859;
+}
+
+.section-title p {
+	margin-top: 25px;
+}
+
+
+/* preloader css */
+
+#preloader {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 99999;
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+	background-image: url(../img/preloader.gif);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-color: #fff;
+}
+
+.table {
+	display: table;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 1;
+}
+
+.table-cell {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+
+img {
+	max-width: 100%;
+}
+
+.mt-30{
+    margin-top: 30px
+}
+
+.mb-30{
+    margin-bottom: 30px
+}
+
+/* ----------------------------------------------------------------------------------------
+*                               02. Navigation area css
+* --------------------------------------------------------------------------------------- */
+
+.top-bar {
+	color: #000;
+	background: #fff;
+	padding: 20px 0px;
+}
+
+.tlogo, .tphone, .tappoint {
+	float: left;
+	width: 33.33%;
+}
+
+.tlogo a {
+    line-height: 60px;
+}
+
+.tphone {
+    text-align: center;
+}
+
+.tphone p {
+	text-align: center;
+	font-size: 15px;
+	margin-bottom:	0px;
+	color: #b38859
+}
+
+.tphone span {
+	color: #333;
+	font-size: 24px;
+	text-align: center;
+	font-weight: 900;
+}
+
+.tappoint {
+	text-align: right;
+	margin-top: 20px;
+}
+
+.tappoint a {
+	color: #fff;
+	background: #b38859;
+	padding: 15px 35px;
+}
+
+.tappoint a:hover {
+	color: #333;
+}
+
+.navbar-brand{
+	display: none;
+}
+
+.menu-area.sticky-menu {
+	background: #d29f68;
+	box-shadow: 0px 3px 4.7px 0.3px rgba(0, 0, 0, 0.24);
+	transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+}
+
+.menu-area.stricky-fixed {
+    box-shadow: 0 1px 4px #ddd;
+	position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background: #d29f68;
+	transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+}
+
+.navbar {
+	margin-bottom: 0;
+	border: 0px;
+}
+
+
+.navbar-brand {
+	padding: 0;
+}
+
+.navbar-brand img {
+    margin-top: 15px;
+}
+
+.navbar-brand:hover {
+	color: #333;
+}
+
+.navbar-nav li {
+	float: none;
+	display: inline-block;
+}
+
+.navbar-nav li a {
+	color: #fff;
+	font-weight: 700;
+	font-size: 14px;
+	font-family: 'Lato', sans-serif;
+}
+
+.nav> li> a:hover, .nav> li> a:focus {
+	background: none;
+}
+
+.mainmenu .navbar-nav li a:hover {
+	color: #333;
+	background: #fff;
+}
+
+.mainmenu .navbar-nav li.active a {
+	color: #333;
+	background: #fff;
+}
+
+
+/* Mobile Nav css */
+
+.navbar-toggle .icon-bar {
+	background: #333;
+}
+
+
+/* ----------------------------------------------------------------------------------------
+*                               03. Slider area css
+* -------------------------------------------------------------------------------------- */
+
+
+/* Home carseoul
+--------------------------- */
+
+#slider, #slider .carousel, #slider .carousel .carousel-inner, #slider .carousel .carousel-inner .item {
+	height: 100%;
+	min-height: 400px;
+}
+
+#slider .carousel-indicators li {
+	width: 12px;
+	height: 12px;
+	border: 1px solid #b38859;
+	border-radius: 0px;
+	background: transparent;
+	margin: 0px;
+	margin-left: 7px;
+}
+
+#slider .carousel-indicators li.active {
+	background: #b38859;
+}
+
+#slider .carousel-control.right, #slider .carousel-control.left {
+	background-image: none;
+}
+
+#slider .carousel .item {
+	min-height: 425px;
+	height: 100%;
+	width: 100%;
+}
+
+#slider .carousel .item:before {
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.80);
+}
+
+#slider .carousel-control {
+	width: 6%;
+	text-shadow: none;
+}
+
+.carousel-fade .carousel-inner .item {
+	transition-property: opacity;
+	-ms-transition-property: opacity;
+	-moz-transition-property: opacity;
+	-webkit-transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left, 
+.carousel-fade .carousel-inner .active.right {
+	opacity: 0;
+}
+
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left, 
+.carousel-fade .carousel-inner .prev.right {
+	opacity: 1;
+}
+
+.carousel-fade .carousel-inner .next, 
+.carousel-fade .carousel-inner .prev, 
+.carousel-fade .carousel-inner .active.left, 
+.carousel-fade .carousel-inner .active.right {
+	left: 0;
+	transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-webkit-transform: translate3d(0, 0, 0);
+}
+
+.carousel-fade .carousel-control {
+	z-index: 2;
+}
+
+.right.carousel-control img, .left.carousel-control img {
+	position: absolute;
+	top: 50%;
+	z-index: 5;
+	display: inline-block;
+	margin-top: -26px;
+	padding: 20px 10px;
+}
+
+.carousel-control img:hover {
+	background: #82b541;
+}
+
+.left.carousel-control img {
+	left: 10px;
+}
+
+.right.carousel-control img {
+	right: 10px;
+}
+
+.carousel-control {
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+.intro-text {
+	text-align: center;
+	display: block;
+	margin: auto;
+	width: 100%;
+	max-width: 600px;
+}
+
+.intro-text .title {
+	text-align: center;
+}
+
+.intro-text h2 {
+    text-transform: uppercase;
+    font-size: 60px;
+    line-height: 65px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.intro-text h1 {
+	text-transform: uppercase;
+	font-size: 110px;
+	line-height: 110px;
+	font-weight: 900;
+	color: #b38859;
+	margin: 30px 0px;
+}
+
+@media (max-width: 767px) {
+	.intro-text h2 {
+	    font-size: 30px;
+		line-height: 45px;
+	}
+	
+	.intro-text h1 {
+		font-size: 60px;
+		line-height: 70px;
+	}
+}
+
+
+/* Slide Background Image */
+
+#slider .slide1 {
+	background-image: url(../img/slider/01.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+#slider .slide2 {
+	background-image: url(../img/slider/02.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+#slider .slide3 {
+	background-image: url(../img/slider/03.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+
+/* ----------------------------------------------------------------------------------------
+*                               04. About area css
+* ---------------------------------------------------------------------------------------*/
+
+.about-area {
+	background: #fff;
+}
+
+
+.about-details h3 {
+	margin-top: 0px;
+	color: #b38859;
+}
+
+.about-details ul {
+	margin-top: 10px;
+	margin-left: 30px;
+	list-style: none;
+}
+
+.about-details ul li {
+	line-height: 30px;
+	position: relative;
+}
+
+.about-details ul li:before {
+	position: absolute;
+	content: '';
+	width: 6px;
+	height: 6px;
+	left: -30px;
+	top: 50%;
+	margin-top: -3px;
+	border: 4px solid #b38859;
+	border-radius: 50px;
+}
+
+.about-details .btn {
+	margin-top: 20px;
+}
+
+.author-details {
+	margin-top: 30px;
+}
+
+.author-img {
+	float: left;
+	margin-right: 20px
+}
+
+.author-sign {
+	padding-top: 20px
+}
+
+.author-details h4 {
+    font-weight: 400
+}
+
+.author-details .author-link a {
+    font-size: 20px;
+    color: #333;
+    margin-right: 10px
+}
+
+.author-link a:hover {
+    color: #d29f68; 
+}
+
+.author-link{
+    margin-top: 5px;
+}
+
+
+.opening-hours-wrap {
+	background-image: url(../img/about/about.html);
+	background-repeat: no-repeat;
+	background-position: top center;
+	position: relative;
+	color: #fff;
+	padding: 29px 60px;
+	background-size: cover;
+}
+
+.opening-hours-wrap:before {
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(210, 159, 104, 0.8);
+}
+
+.opening-hours {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	position: relative;
+}
+
+.opening-hours li {
+	padding-bottom: 10px;
+}
+
+.opening-hours-wrap h3 {
+	margin-bottom: 20px;
+	color: #fff;
+	position: relative;
+    margin-top: 0px;
+}
+
+
+
+/* ----------------------------------------------------------------------------------------
+*                                   05. Service area css
+* --------------------------------------------------------------------------------------- */
+
+.service-area {
+    background-color: #f1f1f1;
+}
+
+.home-services .service-box {
+    margin-top: 30px;
+    background: #fff;
+    padding: 15px 30px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+@media (min-width: 1200px) {
+    .home-services .service-box {
+        /*max-width: 300px;*/
+    }
+}
+
+.home-services .service-box i.fa {
+    color: #d29f68;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    font-size: 60px;
+}
+.home-services .service-box h3 {
+    margin-top: 0;
+    position: relative;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.service-box:hover {
+    color: #fff;
+    background: #d29f68;
+    border-color: #d29f68;
+    transition: 0.3s ease-out;
+    -ms-transition: 0.3s ease-out;
+    -moz-transition: 0.3s ease-out;
+    -webkit-transition: 0.3s ease-out;
+}
+
+.service-box:hover i.fa,
+.service-box:hover.service-box h3{
+    color: #fff;
+}
+
+
+/* ----------------------------------------------------------------------------------------
+*                               06. Booking area css
+* --------------------------------------------------------------------------------------- */
+
+.book-area .section-title p {
+	color: #000
+}
+
+.book-area {
+	background-image: url(../img/bg/booking.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	color: #fff;
+}
+
+.book-area:before {
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(230, 230, 230, 0.85);
+}
+
+.contact-form-book .form-group {
+	position: relative;
+}
+
+.contact-form-book .form-control{
+	border-bottom: 1px solid #000;
+	margin-bottom: 30px; 
+}
+
+.book-area .contact-form-book .form-group input[type="text"]::-webkit-input-placeholder{
+	color: #000 !important;
+}
+
+.book-area .contact-form-book .form-group input[type="email"]::-webkit-input-placeholder{
+	color: #000 !important;
+}
+
+.book-area .contact-form-book .form-group textarea::-webkit-input-placeholder{
+	color: #000 !important;
+}
+
+i.icon{
+    position: absolute;
+    right: 0;
+    top: 15px;
+    color: #333;
+}
+
+.contact-form-book select {
+	width: 100%;
+	height: auto;
+	box-sizing: border-box;
+	padding: 12px 0px;
+	background: transparent;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	color: #000;
+    -moz-appearance: none;
+}
+
+.form-control.select-picker-icon {
+	background-image: url(../img/select-picker-icon.png);
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+.contact-form-book #message {
+	padding-top: 10px;
+	height: 150px;
+}
+
+.contact-form-book button.btn.btn-default {
+	float: left;
+	color: #fff;
+	background: #d29f68
+}
+
+.contact-form-book button.btn.btn-default:hover {
+	background: #333;
+	color: #fff;
+}
+
+.contact-form-book .form-control:focus {
+	border-color: none;
+	outline: 0;
+	box-shadow: none;
+}
+
+
+
+/* ----------------------------------------------------------------------------------------
+*                                07. Team area css
+* --------------------------------------------------------------------------------------- */
+
+.team-area {
+	background: #f1f1f1;
+}
+
+.team-member {
+	text-align: center;
+    transition: 0.3s ease-out;
+    position: relative;
+    overflow: hidden;
+	margin-top: 30px
+}
+
+.member-image {}
+
+.member-image img {
+	width: 100%;
+}
+
+.member-info {
+    transition: 0.3s ease-out;
+    background: #d29f68;
+    text-align: center;
+    padding: 10px 15px 15px;;
+}
+
+.team-member h3 {
+	color: #fff;
+	margin-bottom: 6px;
+	margin-top: 0px;
+	padding-top: 10px;
+}
+
+.member-info .text-muted {}
+
+.member-social a {
+	position: relative;
+	margin: 10px 5px; 
+}
+
+.member-social i.fa {
+	font-size: 18px;
+	padding: 0px;
+	margin: 0px;
+	color: #333;
+	text-align: center;
+}
+
+.member-hover {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0;
+	opacity: 0;
+	background: #d5aa7b;
+	color: #333;
+	text-align: center;
+	transition: 0.3s ease;
+	-ms-transition: 0.3s ease;
+	-moz-transition: 0.3s ease;
+	-webkit-transition: 0.3s ease;
+}
+
+.team-member:hover .member-hover {
+	opacity: 1;
+	height: 100%;
+}
+
+.hover-text {
+	width: 100%;
+    position: absolute;
+    top: 50%;
+    padding: 20px;
+    transform: translate(-0%, -50%);
+}
+
+
+.member-hover h3, .member-hover, .member-hover i.fa {
+	color: #333;
+}
+
+.member-hover i.fa:hover {
+	color: #fff;
+}
+
+.member-hover .member-social {
+	margin: 15px auto;
+}
+
+.member-hover p {
+	color: #fff;
+}
+
+
+/* ----------------------------------------------------------------------------------------
+*                               06. Portfolio/work area css
+* --------------------------------------------------------------------------------------- */
+
+.works.section-big {
+	padding-bottom: 0px;
+}
+
+.portfolio .mix {
+	display: none;
+}
+
+.filters {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+	margin-bottom: 40px; 
+    margin-top: 20px
+}
+
+.filters li {
+	display: inline-block;
+	margin: 0px 15px;
+	margin-bottom: 10px;
+	cursor: pointer;
+	font-weight: 400;
+	font-size: 14px;
+	color: #333;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.filters li.active {
+	color: #b38859;
+}
+
+.work-items .item {
+    position: relative;
+    overflow: hidden;
+    margin-top: 30px;
+    margin: 0 -15px;
+}
+
+.work-items .item img {
+    width: 100%;
+    transition: 0.8s ease-out;
+}
+
+.work-items .overlay{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    text-align: center;
+    opacity: 0;
+    transition: 0.3s cubic-bezier(0.4, 0, 1, 1);
+    -ms-transition: 0.3s cubic-bezier(0.4, 0, 1, 1);
+    -moz-transition: 0.3s cubic-bezier(0.4, 0, 1, 1);
+    -webkit-transition: 0.3s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.work-items .item:hover .overlay {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.work-items .item:hover img {
+    transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+}
+
+.work-items .overlay i.fa {
+    font-size: 25px;
+    color: #fff;
+    padding: 10px;
+    border: 2px solid #fff;
+}
+
+.work-items .overlay h3 {
+    font-size: 18px;
+    color: #fff;
+    margin-top: 15px;
+}
+
+.work-items .overlay .icon{
+    font-size: 36px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;    
+    padding: 20px;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+/* ----------------------------------------------------------------------------------------
+*                                10. Testimonial area css
+* --------------------------------------------------------------------------------------- */
+
+.single-testimonial p {
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+
+.img-details {
+	margin-bottom: 15px;
+}
+
+.img-details img {
+	border: 1px solid #D29F68
+}
+
+.single-testimonial .desg h3 {
+    font-family: 'Lato', sans-serif; 
+    font-size: 18px
+}
+
+.single-testimonial .desg p {
+    color: #d29f68;
+    font-size: 15px
+}
+
+.img-details .desg span {
+	color: #b38859
+}
+
+.owl-theme .owl-controls {
+	margin-top: 40px;
+}
+
+.owl-pagination {
+	width: 80px;
+	margin: auto;
+}
+
+.owl-theme .owl-controls .owl-page span {
+	display: block;
+	width: 12px;
+	height: 12px;
+	margin: 5px 7px;
+	filter: Alpha(Opacity=50);
+	border: 1px solid #b38859;
+	float: left
+}
+
+
+.owl-theme .owl-controls .owl-page.active span {
+	background: #b38859;
+	border: 1px solid #b38859
+}
+
+.owl-theme .owl-controls .owl-buttons div {
+	font-size: 25px;
+	background: none;
+	padding: 5px
+}
+
+/* ----------------------------------------------------------------------------------------
+*                                   08. Fun facts area css
+* --------------------------------------------------------------------------------------- */
+
+.fun-facts-area {
+	background-image: url(../img/bg/fun-bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+}
+
+.fun-facts-area:before {
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(51, 51, 51, 0.70);
+}
+
+.fun-fact h3 {
+	font-size: 48px;
+	font-weight: 900;
+	color: #fff;
+	margin-top: 0px;
+}
+
+.fun-fact p {
+	color: #fff;
+	font-size: 24px;
+    margin-bottom: 0px;
+}
+
+
+/* ----------------------------------------------------------------------------------------
+*                                   09. Pricing area css
+* --------------------------------------------------------------------------------------- */
+
+.price-item {
+    text-align: center;
+    position: relative;
+    margin-top: 30px;
+	background: #f1f1f1;
+}
+
+.price-item ul {
+    list-style: none;
+    font-size: 20px;
+    padding: 15px 0px;
+}
+
+.price-item p.level {
+	color: #fff;
+	font-size: 24px;
+	margin: 0;
+	font-weight: 900;
+	line-height: 70px;
+	text-transform: uppercase;
+	background: #333;
+    font-family: 'Lato', sans-serif;
+}
+
+.featured p.level{
+	background: #b38859
+}
+
+.price-item.featured {
+}
+
+
+.price-item p.desc {
+	font-size: 14px;
+	margin-bottom: 0px
+}
+
+.price-item p.price .dollar {
+	font-size: 30px;
+	position: relative;
+	top: -30px
+}
+
+.price-item .features li {
+	padding: 8px 0;
+}
+
+.price-item a.btn {
+	background: #333;
+	width: 100%;
+	padding: 15px 0px;
+    font-weight: 900;
+	font-family: 'Lato', sans-serif;
+}
+
+.price-item a.btn:hover {
+	background: #b38859;
+	color: #fff
+}
+
+.price-item.featured a.btn {
+	background: #b38859;
+	color: #fff;
+}
+
+.price-item.featured a.btn:hover {
+	background: #333;
+	color: #fff
+}
+
+
+/* ----------------------------------------------------------------------------------------
+*                                   12. Video area css
+* --------------------------------------------------------------------------------------- */
+
+.video-area {
+	background-image: url(../img/bg/video-bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	position: relative;
+	padding: 150px 0px;
+    background-size: cover;
+}
+
+.video-area:before {
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.70);
+}
+
+.video-content {
+	position: relative;
+}
+
+.video-content h2 {
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.video-content i.fa {
+	color: #fff;
+	background: #D29F68;
+	border-radius: 100px;
+	font-size: 50px;
+	padding: 30px 0px 30px 15px;
+	width: 110px;
+}
+
+.video-content i.fa:hover {
+	color: #5c5c5c;
+}
+
+
+/* ----------------------------------------------------------------------------------------
+*                                   11. News area css
+* --------------------------------------------------------------------------------------- */
+
+.single-news {
+    position: relative;
+    margin-top: 30px
+}
+
+.news-image {
+	margin-bottom: 30px;
+}
+
+.news-image img {
+	width: 100%;
+}
+
+.news-date{
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #fff;
+}
+
+.news-date h3 {
+	margin: 0;
+	padding: 10px;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 20px;
+}
+
+.news-date .month{
+    background-color: #D29F68
+}
+
+.news-date .date{
+    background-color: #333333
+}
+
+.news-meta span {
+    margin-right: 10px;
+}
+
+.news-content .subtitle {
+	text-transform: inherit;
+	line-height: 28px;
+}
+
+.news-content h3 {
+	margin-bottom: 20px;
+}
+
+.news-content .subtitle i.fa {
+	color: #82b541;
+}
+
+.news-content .btn {
+	margin-top: 20px;
+    color: #fff;
+    background-color: #333333
+}
+
+.news-content .btn:hover {
+	background-color: #D29F68
+}
+
+.news-meta {
+	display: block;
+	clear: both;
+	overflow: hidden;
+	margin-bottom: 10px;
+	color: #b38859
+}
+
+.news-meta span i.fa {
+	margin-right: 10px;
+}
+
+/* news Modal css */
+
+.news-modal .modal-content {
+	border-radius: 0;
+	background-clip: border-box;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border: none;
+	min-height: 100%;
+	padding: 100px 0;
+}
+
+.news-modal .modal-content h2 {
+	margin-bottom: 10px;
+	line-height: 40px;
+}
+
+.news-modal .modal-content img {
+	width: 100%;
+	height: auto;
+}
+
+.news-modal .modal-content .item-details {
+	margin: 30px 0
+}
+
+.news-modal .close-modal {
+	position: absolute;
+	width: 75px;
+	height: 75px;
+	background-color: transparent;
+	top: 25px;
+	right: 25px;
+	cursor: pointer
+}
+
+.news-modal .close-modal:hover {
+	opacity: .3
+}
+
+.news-modal .close-modal .lr {
+	height: 75px;
+	width: 1px;
+	margin-left: 35px;
+	background-color: #2C3E50;
+	transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	z-index: 1051
+}
+
+.modal-open .modal {
+    z-index: 9999;
+}
+
+.news-modal .close-modal .lr .rl {
+	height: 75px;
+	width: 1px;
+	background-color: #2C3E50;
+	transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	z-index: 1052
+}
+
+.news-modal .modal-backdrop {
+	opacity: 0;
+	display: none
+}
+.modal-body .btn.btn-default:hover {
+	background: #D29F68
+}
+
+
+/* ----------------------------------------------------------------------------------------
+*                                14. Subscribe area css
+* --------------------------------------------------------------------------------------- */
+.subscribe-area {
+    background-color: #D29F68;
+}
+
+.subscribe-box h2 {
+    margin-top: 0px;
+    font-size: 22px;
+}
+
+.subscribe-box h2 span {
+    color: #fff;
+}
+
+.newsletter-form {
+    margin: auto;
+}
+
+.newsletter-form input{
+    display: inline-block;
+    height: 50px;
+    width: 85%;
+    padding: 5px 10px;
+    background: #fff;
+    float: left;
+}
+
+.newsletter-form input::placeholder{
+    color: #333 !important;
+}
+
+.newsletter-form .mc-submit {
+    height: 50px;
+    width: 15%;
+    font-weight: bold;
+    color: #fff;
+    background-color: #333333;
+    border: none;
+    font-size: 24px;
+    position: relative;
+    display: inline-block;
+    float: left;
+    text-align: center;
+}
+.newsletter-form .mc-submit:hover {
+    color: #D29F68;
+}
+.subscribe-area .error {
+    text-align: left;
+}
+
+.mailchimp-alerts {
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+.mailchimp-alerts div {
+}
+.mailchimp-submitting{
+}
+.mailchimp-success{
+    color: green;
+}
+.mailchimp-error{
+    color: red;
+}
+
+
+
+
+/* ----------------------------------------------------------------------------------------
+*                                   15. Contact area css
+* --------------------------------------------------------------------------------------- */
+
+.form-control {
+	display: block;
+	border: 0px;
+	width: 100%;
+	height: 50px;
+	padding: 5px 10px;
+	font-size: 16px;
+	line-height: 1.42857143;
+	background-color: transparent;
+	background-image: none;
+	border-radius: 0px;
+	box-shadow: none;
+	color: #000;
+}
+
+.contact-form .form-group input[type="text"]::-webkit-input-placeholder{
+	color: #000 !important;
+}
+
+.contact-form .form-group input[type="email"]::-webkit-input-placeholder{
+	color: #000 !important;
+}
+
+.contact-form .form-group  textarea::-webkit-input-placeholder{
+	color: #000 !important;
+}
+
+.form-control:focus {
+    border-color: #000;
+    outline: 0;
+    box-shadow: none;
+}
+
+.contact-form .form-group {
+	position: relative;
+	border: 1px solid #E6E6E6;
+	padding-left: 50px;
+	margin-top: 30px;
+	margin-bottom: 0px;
+}
+
+.contact-form .form-group.mt-30{
+	margin-top: 30px;
+}
+
+
+.contact-form .ficon .fa {
+	font-size: 18px;
+	background: #333333;
+	color: #fff;
+	position: absolute;
+	left: 0px;
+	height: 50px;
+	width: 50px;
+	text-align: center;
+	line-height: 50px
+}
+
+.contact-form .box-icon .fa {
+    font-size: 18px;
+    background: #333333;
+    color: #fff;
+    position: absolute;
+    left: 0px;
+    height: 100%;
+    width: 50px;
+    text-align: center;
+    padding: 50px 0px;
+}
+
+.contact-form #message {
+    padding-top: 10px;
+    height: 135px;
+}
+
+.actions {
+	margin-top: 30px;
+}
+
+#submitButton {
+    width: 100%;
+    margin: auto;
+    display: table;
+	line-height: 30px;
+	background-color: #333
+}
+
+#submitButton:hover {
+    background-color: #b38859;
+    color: #fff;
+    background-image: none;
+}
+
+.success {
+    background: #fff none repeat scroll 0 0;
+    color: #50B948;
+    font-weight: 700;
+    padding: 20px;
+    text-align: center;
+}
+
+.error {
+    background: #fff none repeat scroll 0 0;
+    color: #ff0000;
+    font-weight: 700;
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+/* ----------------------------------------------------------------------------------------
+*                                   15. Google Map area css
+* --------------------------------------------------------------------------------------- */
+
+#contactgoogleMap {
+    width: 100%;
+    height: 400px;
+}
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------
+*                                   18. Footer area css
+* --------------------------------------------------------------------------------------- */
+.footer-area{
+    background: #F3F3F3
+}
+
+.copyright-area {
+    background: #333;
+	padding: 25px 0px;
+}
+
+.footer-social a {
+    color: #fff;
+    margin: 0 5px;
+}
+
+.footer-social a i {
+    color: #fff;
+    font-size: 20px;
+    height: 36px;
+    width: 36px;
+    margin: 2px 0px;
+    text-align: center;
+    line-height: 36px;
+    border: 1px solid #fff;
+}
+
+.footer-social a i:hover{
+	border-color: #d29f68;
+    background: #d29f68;
+}
+
+.copyright-text p {
+    margin: 0;
+    color: #fff;
+	margin: 7px 0px;
+}
+
+
+/* ----------------------------------------------------------------------------------------
+*                                   19. Scroll-to-top area css
+* --------------------------------------------------------------------------------------- */
+
+#scroll-to-top{
+    background-color: #333;
+    display: none;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 35px;
+    color: #fff;
+    position: fixed;
+    bottom: 15px;
+    right: 25px;
+    z-index: 999;
+}
+
+#scroll-to-top:hover{
+    background: #1f9cd8; 
+    color: #fff;
+	
+}

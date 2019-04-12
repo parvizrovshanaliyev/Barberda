@@ -1,0 +1,56 @@
+﻿@model Barbeda.Models.Slider
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Create Slider Item</h2>
+
+<form enctype="multipart/form-data" method="post">
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        @Html.LabelFor(t => t.TitleOne)
+        <label>Title One ucun Heading 1 istifade edin</label>
+        @Html.TextAreaFor(t => t.TitleOne, new { @class = "form-control ", id = "titleOne" })
+        @Html.ValidationMessageFor(t => t.TitleOne, null, new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(t => t.TitleTwo)
+        @Html.TextBoxFor(t => t.TitleTwo, new { @class = "form-control " })
+        @Html.ValidationMessageFor(t => t.TitleTwo, null, new { @class = "text-danger" })
+    </div>
+    <div style="display:flex;" class="form-group ">
+        @Html.LabelFor(t => t.Photo)
+        @Html.TextBoxFor(t => t.Photo, new { @class = "form-control ", type = "file", accept = "image/*" })
+        @Html.ValidationMessageFor(t => t.Photo, null, new { @class = "text-danger" })
+    </div>
+    <input type="submit" class="btn btn-primary" name="name" value="Create" />
+    <a href="~/Admin/Slider/Index" class="btn btn-dark">Back to list</a>
+</form>
+
+
+@section scripts{
+    <script src="https://cdn.ckeditor.com/ckeditor5/12.0.0/classic/ckeditor.js"></script>
+    @*<script src="~/ckeditor/ckeditor.js"></script>*@
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#titleOne'))
+            .catch(error => {
+                console.error(error);
+            });
+        //ClassicEditor
+        //    .create(document.querySelector('#titleTWO'))
+        //    .catch(error => {
+        //        console.error(error);
+        //    });
+
+    </script>
+
+
+}
+
+
+
+
+
+

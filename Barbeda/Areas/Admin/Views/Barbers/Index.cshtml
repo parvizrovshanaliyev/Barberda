@@ -1,0 +1,76 @@
+﻿@model  IEnumerable<Barbeda.Models.Barber>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="card mb-3">
+    <div class="card-header">
+        <h2 class="m-b-10">Barbers</h2>
+        <h3><a href="/Admin/Barbers/Create"> <b>+</b> Create NEW Barber</a></h3>
+    </div>
+
+    <div class="card-body">
+        <div class="table-responsive">
+            <table style="width:100%" class="table table-bordered table-striped member-hover dataTable" id="dataTable" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>FullName</th>
+                        <th>Photo</th>
+                        <th>Description</th>
+                        <th>Email</th>
+                        <th>Tel</th>
+                        @*<th>Service Name</th>*@
+                        <th colspan="3">Actions</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>FullName</th>
+                        <th>Photo</th>
+                        <th>Description</th>
+                        <th>Email</th>
+                        <th>Tel</th>
+                        @*<th>Service Name</th>*@
+                        <th colspan="3">Actions</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+
+
+                    @for (int i = 0; i < Model.Count(); i++)
+                    {
+
+                    <tr>
+                        <td>@Model.ElementAt(i).FullName</td>
+                        <td><img style="width:200px" src="~/Assets/img/@Model.ElementAt(i).Image" class="img-fluid"></td>
+
+                        <td>@Model.ElementAt(i).Description</td>
+                        <td>@Model.ElementAt(i).Email</td>
+                        <td>@Model.ElementAt(i).Tel</td>
+                        @*@foreach (var item in Model.ElementAt(i).Services)
+        {
+           <td>@{ if (item.Name == null) { return string.Empty; } else { return item.Name; } }</td>
+
+         }*@
+
+                        <td>
+                            <a href="/Admin/Barbers/Edit/@Model.ElementAt(i).Id" class="btn btn-warning"><i class="fas fa-edit"></i></a>
+                        </td>
+                        <td>
+                            <a href="/Admin/Barbers/Delete/@Model.ElementAt(i).Id" class="btn btn-warning"><i class="fas fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    @*<div class="card-footer small text-muted">@ViewBag.UpdateAt</div>*@
+</div>
+
+
+
+
+

@@ -1,0 +1,38 @@
+﻿@model  Barbeda.Models.Barber
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Edit Barber </h2>
+
+<form enctype="multipart/form-data" method="post">
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <label>Photo</label>
+        <img src="~/Assets/img/@Model.Image" class="img-120 img-thumbnail" style="width: 70px; object-fit: contain;" />
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(s => s.Name)
+        @Html.TextBoxFor(s => s.Name, new { @class = "form-control ", @readonly = "true" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(s => s.Surname)
+        @Html.TextBoxFor(s => s.Surname, new { @class = "form-control ", @readonly = "true" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(s => s.Description)
+        @Html.TextBoxFor(s => s.Description, new { @class = "form-control ", @readonly = "true" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(s => s.Email)
+        @Html.TextBoxFor(s => s.Email, new { @class = "form-control ", @readonly = "true" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(s => s.Tel)
+        @Html.TextBoxFor(s => s.Tel, new { @class = "form-control ", @readonly = "true" })
+    </div>
+    <input type="submit" class="btn btn-primary" name="name" value="Delete" />
+    <a href="~/Admin/Barbers/Index" class="btn btn-dark">Back to list</a>
+</form>
+
