@@ -22,10 +22,9 @@
                     <p>@Model.Barber.Description</p>
                     <h2>Services</h2>
                     <ul>
-
                         @foreach (var item in Model.Barber.ServicetoBarbers.Where(s => s.BarberId == Model.Barber.Id).Select(se => se.Service))
                         {
-                            <li>@item.Name</li>
+                        <li class="@item.Name">@item.Name</li>
                         }
                     </ul>
                     <div class="author-details">

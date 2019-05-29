@@ -7,7 +7,9 @@
 <div class="card mb-3">
     <div class="card-header">
         <h2 class="m-b-10">Service Portfolios</h2>
-        <h3><a href="/Admin/ServicePortfolios/Create"> <b>+</b>Add Image To Service</a></h3>
+
+        <h3><a class="@(Model.Count() == 8 ? "disabled" : " ") btn" href="/Admin/ServicePortfolios/Create"> <b>+</b>Add Image To Service</a></h3>
+
     </div>
 
     <div class="card-body">
@@ -32,14 +34,15 @@
                     {
                         <tr>
                             <td>@Model.ElementAt(i).Service.Name</td>
-                            
+
                             <td><img style="width:200px" src="~/Assets/img/@Model.ElementAt(i).Image" class="img-fluid"></td>
                             <td>
                                 <a href="/Admin/ServicePortfolios/Edit/@Model.ElementAt(i).Id" class="btn btn-warning"><i class="fas fa-edit"></i></a>
                             </td>
-                            <td >
-                                <a href="/Admin/ServicePortfolios/Delete/@Model.ElementAt(i).Id" class="btn btn-warning disabled"><i class="fas fa-trash-alt"></i></a>
+                            <td>
+                                <a href="/Admin/ServicePortfolios/Delete/@Model.ElementAt(i).Id" class="btn btn-warning @(Model.Count()>8?" ":"disabled") "><i class="fas fa-trash-alt"></i></a>
                             </td>
+
                         </tr>
                     }
 

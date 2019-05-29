@@ -30,4 +30,9 @@ namespace Barbeda.Models
         }
 
     }
+
+    public class Register
+    {
+
+    }
 }
